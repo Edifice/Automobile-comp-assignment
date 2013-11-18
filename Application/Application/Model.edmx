@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AutomobilesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="AutomobilesModelStoreContainer">
+          <EntitySet Name="Automobile" EntityType="AutomobilesModel.Store.Automobile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vendor" EntityType="AutomobilesModel.Store.Vendor" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Automobile_Vendor" Association="AutomobilesModel.Store.FK_Automobile_Vendor">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="Automobile" EntitySet="Automobile" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Automobile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="model" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="enginePower" Type="int" />
+          <Property Name="maxSpeed" Type="int" />
+          <Property Name="acceleration" Type="decimal" Precision="4" Scale="1" />
+          <Property Name="fuelEconomy" Type="decimal" Precision="4" Scale="1" />
+          <Property Name="price" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="vendorId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Automobile_Vendor">
+          <End Role="Vendor" Type="AutomobilesModel.Store.Vendor" Multiplicity="1" />
+          <End Role="Automobile" Type="AutomobilesModel.Store.Automobile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Automobile">
+              <PropertyRef Name="vendorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AutomobilesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AutomobilesEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Automobile" EntityType="AutomobilesModel.Automobile" />
+          <EntitySet Name="Vendor" EntityType="AutomobilesModel.Vendor" />
+          <AssociationSet Name="FK_Automobile_Vendor" Association="AutomobilesModel.FK_Automobile_Vendor">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="Automobile" EntitySet="Automobile" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Automobile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="model" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="enginePower" Type="Int32" />
+          <Property Name="maxSpeed" Type="Int32" />
+          <Property Name="acceleration" Type="Decimal" Precision="4" Scale="1" />
+          <Property Name="fuelEconomy" Type="Decimal" Precision="4" Scale="1" />
+          <Property Name="price" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="vendorId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Vendor" Relationship="AutomobilesModel.FK_Automobile_Vendor" FromRole="Automobile" ToRole="Vendor" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Automobile" Relationship="AutomobilesModel.FK_Automobile_Vendor" FromRole="Vendor" ToRole="Automobile" />
+        </EntityType>
+        <Association Name="FK_Automobile_Vendor">
+          <End Role="Vendor" Type="AutomobilesModel.Vendor" Multiplicity="1" />
+          <End Role="Automobile" Type="AutomobilesModel.Automobile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Automobile">
+              <PropertyRef Name="vendorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AutomobilesModelStoreContainer" CdmEntityContainer="AutomobilesEntities">
+          <EntitySetMapping Name="Automobile">
+            <EntityTypeMapping TypeName="AutomobilesModel.Automobile">
+              <MappingFragment StoreEntitySet="Automobile">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="enginePower" ColumnName="enginePower" />
+                <ScalarProperty Name="maxSpeed" ColumnName="maxSpeed" />
+                <ScalarProperty Name="acceleration" ColumnName="acceleration" />
+                <ScalarProperty Name="fuelEconomy" ColumnName="fuelEconomy" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="vendorId" ColumnName="vendorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendor">
+            <EntityTypeMapping TypeName="AutomobilesModel.Vendor">
+              <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

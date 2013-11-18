@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Application.nunit</TopNode>
+  <SelectedNode>[0-1000]S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Application.nunit</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Application.nunit" Expanded="true" />
+    <Node UniqueName="[0-1006]S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Application.dll" Expanded="true" />
+    <Node UniqueName="[0-1007]Application" Expanded="true" />
+    <Node UniqueName="[0-1008]Application.Tests" Expanded="true" />
+    <Node UniqueName="[0-1001]Application.Tests.BusinessLogicTestClass" Expanded="true" />
+  </Nodes>
+</VisualState>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Application.dll" total="4" errors="4" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-11-18" time="16:27:06">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6407" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="FOURTYTWO" user="Dani" user-domain="FOURTYTWO" />
+  <culture-info current-culture="hu-HU" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Application.dll" executed="True" result="Failure" success="False" time="1.477" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Application" executed="True" result="Failure" success="False" time="1.452" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="1.452" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="BusinessLogicTestClass" executed="True" result="Failure" success="False" time="1.448" asserts="0">
+                <results>
+                  <test-case name="Application.Tests.BusinessLogicTestClass.GetAllVendorTest" executed="True" result="Error" success="False" time="0.987" asserts="0">
+                    <failure>
+                      <message><![CDATA[System.InvalidOperationException : No connection string named 'AutomobilesEntities' could be found in the application config file.]]></message>
+                      <stack-trace><![CDATA[at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+at System.Linq.Queryable.OrderBy[TSource,TKey](IQueryable`1 source, Expression`1 keySelector)
+at Application.BL.BusinessService.GetAllVendor() in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\BL\BusinessService.svc.cs:line 56
+at Application.Tests.BusinessLogicTestClass.GetAllVendorTest() in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\Tests\BusinessLogicTestClass.cs:line 37
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="Application.Tests.BusinessLogicTestClass.GetCarsByVendor1Test" executed="True" result="Error" success="False" time="0.082" asserts="0">
+                    <failure>
+                      <message><![CDATA[System.InvalidOperationException : No connection string named 'AutomobilesEntities' could be found in the application config file.]]></message>
+                      <stack-trace><![CDATA[at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+at Application.BL.BusinessService.GetCarsByVendor(Int32 vendorId) in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\BL\BusinessService.svc.cs:line 27
+at Application.Tests.BusinessLogicTestClass.GetCarsByVendor1Test() in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\Tests\BusinessLogicTestClass.cs:line 16
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="Application.Tests.BusinessLogicTestClass.GetCarsByVendor2Test" executed="True" result="Error" success="False" time="0.002" asserts="0">
+                    <failure>
+                      <message><![CDATA[System.InvalidOperationException : No connection string named 'AutomobilesEntities' could be found in the application config file.]]></message>
+                      <stack-trace><![CDATA[at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+at Application.BL.BusinessService.GetCarsByVendor(Int32 vendorId) in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\BL\BusinessService.svc.cs:line 27
+at Application.Tests.BusinessLogicTestClass.GetCarsByVendor2Test() in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\Tests\BusinessLogicTestClass.cs:line 23
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="Application.Tests.BusinessLogicTestClass.GetCarsByVendor3Test" executed="True" result="Error" success="False" time="0.002" asserts="0">
+                    <failure>
+                      <message><![CDATA[System.InvalidOperationException : No connection string named 'AutomobilesEntities' could be found in the application config file.]]></message>
+                      <stack-trace><![CDATA[at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+at Application.BL.BusinessService.GetCarsByVendor(Int32 vendorId) in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\BL\BusinessService.svc.cs:line 27
+at Application.Tests.BusinessLogicTestClass.GetCarsByVendor3Test() in s:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\Tests\BusinessLogicTestClass.cs:line 30
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
