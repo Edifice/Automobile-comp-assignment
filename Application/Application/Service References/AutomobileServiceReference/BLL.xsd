@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BLL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BLL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAutomobileSerializable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomobileSerializable" nillable="true" type="tns:AutomobileSerializable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomobileSerializable" nillable="true" type="tns:ArrayOfAutomobileSerializable" />
+  <xs:complexType name="AutomobileSerializable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acceleration" type="xs:decimal" />
+      <xs:element minOccurs="0" name="enginePower" type="xs:int" />
+      <xs:element minOccurs="0" name="fuelEconomy" type="xs:decimal" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="maxSpeed" type="xs:int" />
+      <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vendorId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutomobileSerializable" nillable="true" type="tns:AutomobileSerializable" />
+  <xs:complexType name="ArrayOfVendorSerializable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VendorSerializable" nillable="true" type="tns:VendorSerializable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVendorSerializable" nillable="true" type="tns:ArrayOfVendorSerializable" />
+  <xs:complexType name="VendorSerializable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendorSerializable" nillable="true" type="tns:VendorSerializable" />
+</xs:schema>

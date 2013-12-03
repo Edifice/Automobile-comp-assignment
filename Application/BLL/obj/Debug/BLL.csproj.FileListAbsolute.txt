@@ -1,0 +1,12 @@
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\BLL.dll.config
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\BLL.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\BLL.pdb
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\DAL.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\EntityFramework.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\DAL.pdb
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\EntityFramework.xml
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\obj\Debug\BLL.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\obj\Debug\BLL.pdb
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\EntityFramework.SqlServer.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\BLL\bin\Debug\EntityFramework.SqlServer.xml

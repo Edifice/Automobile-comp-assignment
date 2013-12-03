@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutomobilesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AutomobilesEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Automobile" EntityType="AutomobilesModel.Automobile" />
+    <EntitySet Name="Vendor" EntityType="AutomobilesModel.Vendor" />
+    <AssociationSet Name="FK_Automobile_Vendor" Association="AutomobilesModel.FK_Automobile_Vendor">
+      <End Role="Vendor" EntitySet="Vendor" />
+      <End Role="Automobile" EntitySet="Automobile" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Automobile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="model" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="enginePower" Type="Int32" />
+    <Property Name="maxSpeed" Type="Int32" />
+    <Property Name="acceleration" Type="Decimal" Precision="4" Scale="1" />
+    <Property Name="fuelEconomy" Type="Decimal" Precision="4" Scale="1" />
+    <Property Name="price" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="vendorId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Vendor" Relationship="AutomobilesModel.FK_Automobile_Vendor" FromRole="Automobile" ToRole="Vendor" />
+  </EntityType>
+  <EntityType Name="Vendor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Automobile" Relationship="AutomobilesModel.FK_Automobile_Vendor" FromRole="Vendor" ToRole="Automobile" />
+  </EntityType>
+  <Association Name="FK_Automobile_Vendor">
+    <End Role="Vendor" Type="AutomobilesModel.Vendor" Multiplicity="1" />
+    <End Role="Automobile" Type="AutomobilesModel.Automobile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Automobile">
+        <PropertyRef Name="vendorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

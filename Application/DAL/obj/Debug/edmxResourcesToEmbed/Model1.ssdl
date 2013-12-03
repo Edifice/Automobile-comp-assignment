@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutomobilesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AutomobilesModelStoreContainer">
+    <EntitySet Name="Automobile" EntityType="AutomobilesModel.Store.Automobile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vendor" EntityType="AutomobilesModel.Store.Vendor" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Automobile_Vendor" Association="AutomobilesModel.Store.FK_Automobile_Vendor">
+      <End Role="Vendor" EntitySet="Vendor" />
+      <End Role="Automobile" EntitySet="Automobile" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Automobile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="model" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="enginePower" Type="int" />
+    <Property Name="maxSpeed" Type="int" />
+    <Property Name="acceleration" Type="decimal" Precision="4" Scale="1" />
+    <Property Name="fuelEconomy" Type="decimal" Precision="4" Scale="1" />
+    <Property Name="price" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="vendorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vendor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Automobile_Vendor">
+    <End Role="Vendor" Type="AutomobilesModel.Store.Vendor" Multiplicity="1" />
+    <End Role="Automobile" Type="AutomobilesModel.Store.Automobile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Automobile">
+        <PropertyRef Name="vendorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

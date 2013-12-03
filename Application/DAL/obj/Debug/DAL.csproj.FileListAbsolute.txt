@@ -1,0 +1,9 @@
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\bin\Debug\DAL.dll.config
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\bin\Debug\DAL.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\bin\Debug\DAL.pdb
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\bin\Debug\EntityFramework.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\bin\Debug\EntityFramework.SqlServer.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\bin\Debug\EntityFramework.xml
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\bin\Debug\EntityFramework.SqlServer.xml
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\obj\Debug\DAL.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\DAL\obj\Debug\DAL.pdb
