@@ -6,5 +6,6 @@ S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Ent
 S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\nunit.framework.xml
 S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\obj\Debug\Application.dll
 S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\obj\Debug\Application.pdb
-S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\Application.dll.config
 S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\obj\Debug\Application.csprojResolveAssemblyReference.cache
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\EntityFramework.SqlServer.dll
+S:\_work\_EASV\3.sem\Automobiles-comp-assignment\Application\Application\bin\EntityFramework.SqlServer.xml
